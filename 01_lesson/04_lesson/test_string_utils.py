@@ -92,3 +92,31 @@ def test_delete_sym_positive(string, symbol, result):
 )
 def test_delete_sym_negative(string, symbol, result):
     assert string_utils.delete_symbol(string, symbol) == result
+
+
+
+@pytest.mark.positive_test
+@pytest.mark.parametrize(
+    "string, result",
+    [
+        ("buratino", "Buratino"),
+        ("x-file", "X-file"),
+        ("2 восточный", "2 восточный")  
+    ],
+)
+def test_trim_positive(string, result):
+    assert string_utils.capitalize(string) == result
+
+
+@pytest.mark.negative_test
+@pytest.mark.parametrize(
+    "string, result",
+    [
+        ("", ""),
+        ("  ", " "),
+        (2025, None),
+        ([], None)
+    ],
+)
+def test_trim_negative(string, result):
+    assert string_utils.capitalize(string) == result
