@@ -4,23 +4,20 @@ from shop_auth import PageAuth
 from shop_basket import BasketPageShop
 from buyer_data import BuyerDataPage
 
-def test_shop():
-    driver = webdriver.Chrome()#Открываем браузер. Войти на сайт магазина
-    main_page_shop = PageAuth(driver)#присваимваем переменную
-    main_page_shop.shop_auth("standard_user", "secret_sauce")# Ввести данные пользователя и нажать на кнопку логин
-    
-    page_selection = MainPageShop(driver)
-    page_selection.souce_selection()#Выбор соусов и добавление в корзину
-    page_selection.transit_basket()#переход в корзину
-    
-    page_basket = BasketPageShop(driver)
-    res = page_basket.result_basket()#Проверка наличия товара в корзине
-    assert res == 3
-    page_basket.checkout()#Переход на страницу покпателя
 
+def test_shop():
+    driver = webdriver.Chrome()
+    main_page_shop = PageAuth(driver)
+    main_page_shop.shop_auth("standard_user", "secret_sauce")
+    page_selection = MainPageShop(driver)
+    page_selection.souce_selection()
+    page_selection.transit_basket()
+    page_basket = BasketPageShop(driver)
+    res = page_basket.result_basket()
+    assert res == 3
+    page_basket.checkout()
     page_buyer = BuyerDataPage(driver)
     page_buyer.name_input("Pol", "Baba", "654321")
     result = page_buyer.sum_shop()
     assert result == "Total: $58.29"
     driver.quit()
-    

@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class BuyerDataPage:
 
     def __init__(self, driver):
@@ -19,6 +20,6 @@ class BuyerDataPage:
         self.driver.find_element(By.CSS_SELECTOR, "#continue").click()
 
     def sum_shop(self):
-        sum = self.driver.find_element(By.CSS_SELECTOR, "div[data-test = 'total-label']").text
+        sum = self.driver.find_element(
+            By.CSS_SELECTOR, "div[data-test = 'total-label']").text
         return sum
-    

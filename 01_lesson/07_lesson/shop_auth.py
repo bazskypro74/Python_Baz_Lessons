@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class PageAuth:
 
     def __init__(self, driver):
@@ -7,9 +8,9 @@ class PageAuth:
         self.driver.get("https://www.saucedemo.com/")
         self.driver.implicitly_wait(50)
         self.driver.maximize_window()
-    
+
     def shop_auth(self, name, password):
-        self.name =  name
+        self.name = name
         self.password = password
         user = self.driver.find_element(
             By.CSS_SELECTOR, "#user-name")
@@ -17,4 +18,4 @@ class PageAuth:
         password = self.driver.find_element(By.CSS_SELECTOR, "#password")
         password.send_keys(self.password)
         self.driver.find_element(
-        By.CSS_SELECTOR, "#login-button").click()
+            By.CSS_SELECTOR, "#login-button").click()
