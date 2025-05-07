@@ -1,18 +1,11 @@
 from yougileapi import Yougile_Api
 api = Yougile_Api("https://ru.yougile.com/api-v2")
 
-log_user = "bazskypro74@gmail.com"
-pass_user = "258369zaq@"
-id_projects_user = "e9a39704-c863-46e4-824d-c4044037f061"
-token_user = "nrk-eRReREVZkIaghURmaPv8NfrDBp4ehF5hsDXag+Pfhr6OCYvdT4T1+vEeBEnd"
+log_user = "*"
+pass_user = "*"
+id_projects_user = "*"
+token_user = "*"
 
-# log_user = "bazskypro74@gmail.com"
-
-# pass_user = "258369zaq@"
-
-# id_projects_user = "e9a39704-c863-46e4-824d-c4044037f061"
-
-# token_user = "nrk-eRReREVZkIaghURmaPv8NfrDBp4ehF5hsDXag+Pfhr6OCYvdT4T1+vEeBEnd"
 
 def test_company_list_positiv():
     login_user = log_user
