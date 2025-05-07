@@ -7,7 +7,7 @@ id_projects_user = "*"
 token_user = "*"
 
 
-def test_company_list_positiv():
+def test_company_list_positive():
     login_user = log_user
     password_user = pass_user
     name_user_company = ""
@@ -17,7 +17,7 @@ def test_company_list_positiv():
     assert ids[0] == ids[-36]
 
 
-def test_token_list_negativ():  # statusCode = 400, Нет id компании в БД
+def test_token_list_negative():  # statusCode = 400, Нет id компании в БД
     login_user = log_user
     password_user = pass_user
     companyID = '0aad5fe0-efd2-40c0-8120-858250206ebe'
@@ -26,7 +26,7 @@ def test_token_list_negativ():  # statusCode = 400, Нет id компании �
     assert key[0]['statusCode'] == 400
 
 
-def test_id_project_positiv():
+def test_id_project_positive():
     token = token_user
     title = "Окно"
     users = {}
@@ -37,7 +37,7 @@ def test_id_project_positiv():
     assert len(result["id"][-1]) == len(result["id"][32])
 
 
-def test_id_project_negativ():  # Не верный тип объекта в users
+def test_id_project_negative():  # Не верный тип объекта в users
 
     token = token_user
     title = "Окно"
@@ -46,7 +46,7 @@ def test_id_project_negativ():  # Не верный тип объекта в use
     assert result['statusCode'] == 400
 
 
-def test_update_projects_positiv():
+def test_update_projects_positive():
     token = token_user
     title = "Окно"
     users = {}
@@ -63,7 +63,7 @@ def test_update_projects_positiv():
     assert len(result["id"][-1]) == len(result["id"][32])
 
 
-def test_update_projects_negativ():  # title проекта пустая строка
+def test_update_projects_negative():  # title проекта пустая строка
     token = token_user
     title = ""
     users = {}
