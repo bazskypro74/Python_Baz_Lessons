@@ -1,5 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+echo "__pycache__/" >> .gitignore
+echo "*.py[cod]" >> .gitignore
 *.py[cod]
 *$py.class
 desktop.ini
