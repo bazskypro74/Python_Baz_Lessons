@@ -1,10 +1,12 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
-echo "__pycache__/" >> .gitignore
-echo "*.py[cod]" >> .gitignore
+__pycache__
+.gitignore
+*.py[cod]" >> .gitignore
 *.py[cod]
 *$py.class
+.pytest_cache
 desktop.ini
+.vscode
 # C extensions
 *.so
 desktop.ini
