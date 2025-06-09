@@ -1,3 +1,0 @@
-<sqlalchemy.engine.cursor.CursorResult object at 0x00000233C22B9940>
-(5123, 'zaqxsw@gmail.ru', 6)
-5123 zaqxsw@gmail.ru 6

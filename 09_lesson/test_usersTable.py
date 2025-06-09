@@ -1,5 +1,4 @@
 from UsersTable import UsersTable
-import allure
 
 db = UsersTable("postgresql://bazskypro:258369zaq@localhost:5432/postgres")
 
