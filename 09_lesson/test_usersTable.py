@@ -1,7 +1,7 @@
 from UsersTable import UsersTable
+import allure
 
 db = UsersTable("postgresql://bazskypro:258369zaq@localhost:5432/postgres")
-
 
 def test_insert_user():
     user_id = "5123"
